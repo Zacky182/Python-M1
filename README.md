@@ -36,7 +36,7 @@ python ur_pet.py
 ```
 
 ### Contributing
-Contributions are welcome! Please feel free to open a pull request, sent to my [email](ammarmuzacky@gmail.com) or submit an issue if you encounter any problems or have suggestions for improvements.
+Contributions are welcome! Please feel free to open a pull request, sent to my email _ammarmuzacky@gmail.com_ or submit an issue if you encounter any problems or have suggestions for improvements.
 
 
 
