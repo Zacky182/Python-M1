@@ -24,7 +24,7 @@ To use Ur.PET, follow these steps
 ### How to Run
 1. Clone the repository:
 ```
-git *clone* https://github.com/Zacky182/Python-M1.git
+git clone https://github.com/Zacky182/Python-M1.git
 ```
 2. Install dependencies :
 ```
