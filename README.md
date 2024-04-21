@@ -31,7 +31,7 @@ Once logged in, you will be presented with a menu where you can choose various o
 ### How to Run
 1. Clone the repository:
 ```
-git clone https://github.com/Zacky182/Python-M1.git
+git clone https://github.com/Zacky182/Python-M1-Ur.Pet.git
 ```
 2. Install dependencies :
 ```
