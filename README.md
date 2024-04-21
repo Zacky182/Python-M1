@@ -1,7 +1,7 @@
 # Ur.PET - Your Personal Expense Tracking Program
 ## General Info
 Inspired by James Clear's book Atomic Habit, I created a Python program called Ur.PET. It is a simple Python program for tracking personal expenses. It realizes the value of building atomic habits by empowering users to set spending targets for the day and carefully record their transactions accordingly. Ultimately, users will receive a summary or notification indicating whether their spending exceeded the target or if they managed to save money. This fosters mindful spending habits and financial awareness, thereby contributing to long-term financial well-being.
-Don't miss out – visit our article on my Medium to add more perspective [here]([https://medium.com/@ammarmuzacky/manage-your-finances-a-guide-to-creating-a-simple-data-science-based-expense-tracker-in-python-0c5abaecda8f](https://medium.com/@ammarmuzacky)! or you may visit my Portfolio about Exploring Efficiency: Navigating Expense Tracking with Iterable Functions [here](https://medium.com/@ammarmuzacky/d43bbb3d5445)!
+Don't miss out – visit our article on my Medium to add more perspective [here](https://medium.com/@ammarmuzacky)! or you may visit my Portfolio about Exploring Efficiency: Navigating Expense Tracking with Iterable Functions [here](https://medium.com/@ammarmuzacky/d43bbb3d5445)!
 
 ### Features
 1. Login: Users can log in with their username and password. (For demonstration purposes, a dummy user authentication system is implemented.)
