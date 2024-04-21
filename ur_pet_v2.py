@@ -313,6 +313,10 @@ def write_transaction_history(transactions):
     
 def reset_transaction_history():
     while True:
+        if not transactions:  # Check if there are no transaction history
+            print("No transaction history available.")
+            break  # Exit the loop if there is no transaction history
+        
         confirm = input("Are you sure you want to reset all transaction history? (Yes/No): ").lower()
         if confirm == 'yes':
             # Clear the transactions list
@@ -326,7 +330,6 @@ def reset_transaction_history():
             break  # Exit the loop if the input is valid
         else:
             print("Invalid input. Please enter 'Yes' or 'No'.")
-
 
 def main():
     global transactions
