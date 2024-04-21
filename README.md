@@ -15,12 +15,6 @@ Don't miss out – visit our article on my Medium to add more perspective [here]
 7. View Transaction History: Users can view their transaction history, including date, category, amount, and details.
 8. Reset Transaction History: Users can reset all transaction history.
 
-### Getting Started
-To use Ur.PET, follow these steps
-1. Clone the repository to your local machine.
-2. Install the required dependencies by running pip install -r requirements.txt.
-3. Run the main.py file using Python.
-
 ### Usage
 Upon running the program, you will be prompted to log in. Use the provided dummy credentials or modify the valid_credentials dictionary in the code to suit your needs.
 Once logged in, you will be presented with a menu where you can choose various options to manage your expenses.
