@@ -28,7 +28,7 @@ def display_menu(target_expense=None):
     4. Update Transaction
     5. Summarize Expenses
     6. View Transaction History
-    7. Reset Transaction History
+    7. Reset All Transaction
     8. Exit     
 ''')
 
@@ -311,7 +311,7 @@ def write_transaction_history(transactions):
     except FileNotFoundError:
         print("Error: transaction_history.csv file not found.")
     
-def reset_transaction_history():
+def reset_all_transaction():
     while True:
         if not transactions:  # Check if there are no transaction history
             print("No transaction history available.")
@@ -364,7 +364,7 @@ def main():
             view_transaction_history()
 
         elif choice == '7':
-            reset_transaction_history()
+            reset_all_transaction()
 
         elif choice == '8':
             print("Exiting program...")
