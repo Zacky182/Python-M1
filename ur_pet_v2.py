@@ -28,7 +28,7 @@ def display_menu(target_expense=None):
     4. Update Transaction
     5. Summarize Expenses
     6. View Transaction History
-    7. Reset All Transaction
+    7. Reset Transaction History
     8. Exit     
 ''')
 
@@ -162,7 +162,8 @@ def remove_transaction(transactions):
                     print("Invalid input. Please enter 'Yes' or 'No'.")
             
         else:
-            print("Invalid, please input valid transaction ID!")
+            print("Invalid transaction ID.")
+            return  # Return to the menu
 
 def update_transaction(transactions):
     if not transactions:
@@ -311,12 +312,12 @@ def write_transaction_history(transactions):
     except FileNotFoundError:
         print("Error: transaction_history.csv file not found.")
     
-def reset_all_transaction():
+def reset_transaction_history():
+    if not transactions:
+        print("No transactions available to reset.")
+        return
+    
     while True:
-        if not transactions:  # Check if there are no transaction history
-            print("No transaction history available.")
-            break  # Exit the loop if there is no transaction history
-        
         confirm = input("Are you sure you want to reset all transaction history? (Yes/No): ").lower()
         if confirm == 'yes':
             # Clear the transactions list
@@ -330,6 +331,7 @@ def reset_all_transaction():
             break  # Exit the loop if the input is valid
         else:
             print("Invalid input. Please enter 'Yes' or 'No'.")
+
 
 def main():
     global transactions
@@ -364,7 +366,7 @@ def main():
             view_transaction_history()
 
         elif choice == '7':
-            reset_all_transaction()
+            reset_transaction_history()
 
         elif choice == '8':
             print("Exiting program...")
