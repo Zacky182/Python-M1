@@ -28,7 +28,7 @@ def display_menu(target_expense=None):
     4. Update Transaction
     5. Summarize Expenses
     6. View Transaction History
-    7. Reset Transaction History
+    7. Reset All Transaction History
     8. Exit     
 ''')
 
@@ -139,9 +139,11 @@ def remove_transaction(transactions):
         view_transactions()
         print("Remove Transaction\n")
         index_input = input("Enter ID of transaction to remove: ")
+        
         if not index_input.isdigit():
             print("Invalid input. Please enter a valid ID number.")
             continue
+        
         index_to_remove = int(index_input)
         if 0 < index_to_remove <= len(transactions):
             del transactions[index_to_remove - 1]
@@ -150,20 +152,26 @@ def remove_transaction(transactions):
             # Reassign IDs to transactions
             for i in range(len(transactions)):
                 transactions[i]['id'] = i + 1
+
             view_transactions()
-            
+
+            # Check if there are no transactions left
+            if not transactions:
+                print("No transactions available anymore.")
+                return  # Return to the menu
+
             while True:
                 choice = input("Do you want to remove another transaction? (Yes/No): ")
                 if choice.lower() == "yes":
                     break
                 elif choice.lower() == "no":
-                    return
+                    return  # Return to the menu
                 else:
                     print("Invalid input. Please enter 'Yes' or 'No'.")
-            
         else:
             print("Invalid transaction ID.")
             return  # Return to the menu
+
 
 def update_transaction(transactions):
     if not transactions:
