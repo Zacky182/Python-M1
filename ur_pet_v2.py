@@ -319,26 +319,39 @@ def write_transaction_history(transactions):
                 writer.writerow(row)
     except FileNotFoundError:
         print("Error: transaction_history.csv file not found.")
-    
+
+def has_transactions():
+    # Check if there are transactions in memory
+    if transactions:
+        return True
+
+    # Check if there are transactions in the CSV file
+    csv_transactions = read_transaction_history()
+    if csv_transactions:
+        return True
+
+    # If no transactions are found
+    return False
+
 def reset_transaction_history():
-    if not transactions:
+    if not has_transactions():
         print("No transactions available to reset.")
         return
-    
-    while True:
-        confirm = input("Are you sure you want to reset all transaction history? (Yes/No): ").lower()
-        if confirm == 'yes':
-            # Clear the transactions list
-            transactions.clear()
+
+    confirm = input("Are you sure you want to reset all transaction history? (Yes/No): ").lower()
+    if confirm == 'yes':
+        try:
             # Clear the transaction history file
             open('transaction_history.csv', 'w').close()
+            # Clear the in-memory transactions list
+            transactions.clear()
             print("Transaction history has been reset.")
-            break  # Exit the loop if the input is valid
-        elif confirm == 'no':
-            print("Reset cancelled.")
-            break  # Exit the loop if the input is valid
-        else:
-            print("Invalid input. Please enter 'Yes' or 'No'.")
+        except FileNotFoundError:
+            print("No transaction history file found.")
+    elif confirm == 'no':
+        print("Reset cancelled.")
+    else:
+        print("Invalid input. Please enter 'Yes' or 'No'.")
 
 
 def main():
