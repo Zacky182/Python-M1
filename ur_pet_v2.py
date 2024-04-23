@@ -337,21 +337,22 @@ def reset_transaction_history():
     if not has_transactions():
         print("No transactions available to reset.")
         return
-
-    confirm = input("Are you sure you want to reset all transaction history? (Yes/No): ").lower()
-    if confirm == 'yes':
-        try:
-            # Clear the transaction history file
-            open('transaction_history.csv', 'w').close()
-            # Clear the in-memory transactions list
-            transactions.clear()
-            print("Transaction history has been reset.")
-        except FileNotFoundError:
-            print("No transaction history file found.")
-    elif confirm == 'no':
-        print("Reset cancelled.")
-    else:
-        print("Invalid input. Please enter 'Yes' or 'No'.")
+    while True :
+        confirm = input("Are you sure you want to reset all transaction history? (Yes/No): ").lower()
+        if confirm == 'yes':
+            try:
+                # Clear the transaction history file
+                open('transaction_history.csv', 'w').close()
+                # Clear the in-memory transactions list
+                transactions.clear()
+                print("Transaction history has been reset.")
+            except FileNotFoundError:
+                print("No transaction history file found.")
+        elif confirm == 'no':
+            print("Reset cancelled.")
+            return
+        else:
+            print("Invalid input. Please enter 'Yes' or 'No'.")
 
 
 def main():
