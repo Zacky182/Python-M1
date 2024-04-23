@@ -21,7 +21,7 @@ Once logged in, you will be presented with a menu where you can choose various o
 
 
 ### Dependencies and Environment requirements:
-1. The code is written in Python, so it requires a Python interpreter to run. The code seems compatible with Python 3.x.
+1. The code is written in Python, so it requires a Python interpreter to run. The code seems compatible with Python 3.12.
 2. [tabulate](https://pypi.org/project/tabulate/): A Python library for formatting tabular data.
 3. CSV : Python's built-in CSV module for reading and writing CSV files.
 
