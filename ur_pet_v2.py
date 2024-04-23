@@ -346,6 +346,7 @@ def reset_transaction_history():
                 # Clear the in-memory transactions list
                 transactions.clear()
                 print("Transaction history has been reset.")
+                return
             except FileNotFoundError:
                 print("No transaction history file found.")
         elif confirm == 'no':
